@@ -1,6 +1,6 @@
 from flask import Flask
 
-from .api import api, BaseResource, OpenResource, CommonResource, StudentResource, CounsellorResource
+from .api import api, BaseResource, OpenResource, CommonResource
 from .models import db, ReprMixin, BaseMixin
 from .factory import create_app
 from .schema import ma

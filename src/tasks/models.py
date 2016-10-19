@@ -28,7 +28,7 @@ class Question(db.Model, BaseMixin):
     question_type = db.Column(db.Integer, db.ForeignKey('question_type.id'), nullable=False)
     task_id = db.Column(db.Integer, db.ForeignKey('task.id'), nullable=False)
 
-    task = db.relationship('Task', foreign_key=[task_id], backref='questions')
+    task = db.relationship('Task', backref='questions')
 
     @hybrid_property
     def choices(self):
